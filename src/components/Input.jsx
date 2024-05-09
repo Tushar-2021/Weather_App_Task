@@ -77,8 +77,9 @@ const Input = ({ setQuery, units, setUnits }) => {
           onKeyDown={handleKeyDown}
           type="text"
           placeholder="Search for a city..."
-          className="text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize placeholder-lowercase"
+          className="text-sm rounded-full p-2 w-full shadow-xl focus:outline-none capitalize placeholder-lowercase"
         />
+
         <UilSearch
           size={25}
           className="text-white cursor-pointer transition ease-out hover:scale-125"
@@ -107,7 +108,7 @@ const Input = ({ setQuery, units, setUnits }) => {
           °F
         </button>
       </div>
-      {/* Search History Box */}
+
       <div className="flex flex-col w-full md:w-3/4 items-center justify-center mt-4 md:mt-0">
         <div className="border border-gray-300 rounded-md p-2 max-h-40 overflow-y-auto">
           {searchHistory.map((item, index) => (
