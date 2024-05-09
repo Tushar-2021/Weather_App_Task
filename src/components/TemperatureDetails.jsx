@@ -51,7 +51,7 @@ const TemperatureDetails = ({
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center space-x-2 text-white text-sm py-3">
+      <div className="flex flex-wrap items-center justify-center space-x-1 text-white text-sm py-3">
         <UilSun />
         <p className="font-light">
           Rise:{" "}
