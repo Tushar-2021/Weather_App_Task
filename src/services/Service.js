@@ -62,7 +62,7 @@ const formatcurrentWeather = (data) => {
 const getFormattedWeatherData = async (searchParams) => {
   console.log(searchParams);
   if (searchParams.q === "") {
-    searchParams.q = "london";
+    searchParams.q = "delhi";
   }
   const formattedcurrentWeather = await getweatherData(
     "weather",
