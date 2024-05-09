@@ -60,7 +60,7 @@ const formatcurrentWeather = (data) => {
 // };
 
 const getFormattedWeatherData = async (searchParams) => {
-  console.log(searchParams);
+
   if (searchParams.q === "") {
     searchParams.q = "delhi";
   }

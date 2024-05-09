@@ -5,7 +5,7 @@ import { faSun, faCloudShowersHeavy, faCloud } from '@fortawesome/free-solid-svg
 const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
 const ForecastDetail = ({ data }) => {
-  console.log(data);
+
   const main = data[0].main;
   const d = new Date(data[0].dt_txt);
   const dayname = weekday[d.getDay()];
