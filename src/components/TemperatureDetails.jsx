@@ -19,6 +19,10 @@ const TemperatureDetails = ({
     wind,
   }
 }) => {
+  // Convert sunrise and sunset timestamps to local time in the specified timezone
+  const sunriseTime = new Date(sunrise * 1000).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: timezone });
+  const sunsetTime = new Date(sunset * 1000).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', timeZone: timezone });
+
   return (
     <div>
       <div className="flex items-center justify-center py-6 text-xl text-cyan-300">
@@ -51,15 +55,14 @@ const TemperatureDetails = ({
         <UilSun />
         <p className="font-light">
           Rise:{" "}
-
+          <span className="font-medium ml-1">{sunriseTime}</span>
         </p>
         <p className="font-light">|</p>
 
         <UilSunset />
         <p className="font-light">
           Set:{" "}
-          <span className="font-medium ml-1">
-          </span>
+          <span className="font-medium ml-1">{sunsetTime}</span>
         </p>
         <p className="font-light">|</p>
 
@@ -68,6 +71,7 @@ const TemperatureDetails = ({
           High:{" "}
           <span className="font-medium ml-1">{`${temp_max}°`}</span>
         </p>
+
         <p className="font-light">|</p>
 
         <UilSun />
